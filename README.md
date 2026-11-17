@@ -41,6 +41,11 @@
 1. `backend\start-backend.bat` → http://127.0.0.1:8020 (+ Swagger `/docs`)
 2. `frontend\start-frontend.bat` → http://localhost:3010 (dev) — или весь сайт уже раздаёт бэкенд на **http://127.0.0.1:8020**
 
+## Онлайн-деплой
+
+- GitHub: https://github.com/sajranbaevalihan88-collab/Oruk-project
+- Render: Blueprint-деплой в 3 клика — инструкция в **[DEPLOY.md](DEPLOY.md)** (`render.yaml` + Dockerfile в репозитории)
+
 ```bash
 # тесты (11 сквозных API-тестов)
 cd backend && .venv\Scripts\python -m pytest tests\ -q
