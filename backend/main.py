@@ -22,6 +22,9 @@ app.include_router(routes.router)
 @app.on_event("startup")
 def startup():
     init_db()
+    # Idempotent: seeds demo users/products/prices only when the DB is empty
+    import seed_data
+    seed_data.seed()
 
 
 # Serve the built frontend (frontend/dist) if it exists
