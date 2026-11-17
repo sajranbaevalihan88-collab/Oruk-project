@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+backend/oruk.db
+backend/tests/test_oruk.db
+backend/cleanup_garbage.py
+node_modules/
+frontend/dist/
+.env
+*.log

@@ -1,0 +1,13 @@
+# Render Blueprint: deploys the whole Örük.AI stack as ONE web service.
+# (Dockerfile: stage 1 builds React, stage 2 serves API + static site on $PORT)
+services:
+  - type: web
+    name: oruk-ai
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false   # set manually in Render dashboard (optional: offline mode works without it)
+      - key: ORUK_SECRET
+        generateValue: true
